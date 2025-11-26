@@ -6,7 +6,7 @@
         "build": "vite build",
         "postinstall": "node scripts/setup.js",
         "//": "--- STACKBLITZ COMMANDS ---",
-        "db:init": "touch database/database.sqlite && node scripts/cli.js artisan key:generate --force  && node scripts/cli.js artisan migrate:fresh --seed --force",
+        "db:init": "touch database/database.sqlite && node scripts/cli.js artisan key:generate && node scripts/cli.js artisan migrate && node scripts/cli.js artisan db:seed --class=ChirpSeeder",
         "php-server": "node scripts/serve.js",
         "vite-server": "vite --open",
         "dev": "npm run db:init && concurrently \"npm run php-server\" \"wait-on tcp:3000 && npm run vite-server\""
