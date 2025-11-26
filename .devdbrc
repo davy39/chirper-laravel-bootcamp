@@ -1,0 +1,6 @@
+[
+  {
+    "type": "sqlite",
+    "path": "c:\\Users\\darks\\code\\php\\taskflow\\database\\database.sqlite"
+  }
+]

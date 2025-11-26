@@ -1,0 +1,25 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "postinstall": "node scripts/setup.js",
+        "//": "--- STACKBLITZ COMMANDS ---",
+        "db:init": "touch database/database.sqlite && node scripts/cli.js artisan key:generate --force  && node scripts/cli.js artisan migrate:fresh --seed --force",
+        "php-server": "node scripts/serve.js",
+        "vite-server": "vite --open",
+        "dev": "npm run db:init && concurrently \"npm run php-server\" \"wait-on tcp:3000 && npm run vite-server\""
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.0.0",
+        "axios": "^1.11.0",
+        "concurrently": "^9.0.1",
+        "express": "^5.1.0",
+        "laravel-vite-plugin": "^2.0.0",
+        "tailwindcss": "^4.0.0",
+        "tar": "^7.5.2",
+        "vite": "^7.0.7",
+        "wait-on": "^9.0.3"
+    }
+}
