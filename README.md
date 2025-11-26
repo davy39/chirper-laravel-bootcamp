@@ -5,6 +5,16 @@ This project demonstrates real-world Laravel development practices, including au
 
 It serves as a showcase of modern Laravel full-stack development fundamentals.
 
+
+
+
+---
+
+## 🚀 Start it in your browser !
+
+[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https://pr.new/davy39/chirper-laravel-bootcamp)
+
+
 ---
 
 ## ✨ Features
